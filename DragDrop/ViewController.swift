@@ -84,7 +84,7 @@ extension ViewController: UIDropInteractionDelegate{
     
     func dropInteraction(_ interaction: UIDropInteraction, sessionDidEnd session: UIDropSession) {
         print("DID END")
-        //No need to stop animation here again as sessionDidEnd is always called AFTER sessionDidExit
+        self.imageToDropItemsOn.layer.removeAllAnimations()
     }
 }
 
